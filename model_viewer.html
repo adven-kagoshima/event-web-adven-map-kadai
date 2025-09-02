@@ -4,7 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
     <title>Document</title>
+
+    <style>
+    h2#human {
+    position: relative;/*相対位置*/
+    padding-left: 1.2em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #7b6459;/*文字色*/
+    }
+
+    h2#human:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f007";/*アイコンのユニコード*/
+    font-weight: 900;
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0;/*アイコンの位置*/
+    top: 0;/*アイコンの位置*/
+    color: #000000; /*アイコン色*/
+    }
+    h2#building  {
+    position: relative;/*相対位置*/
+    padding-left: 1.2em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #7b6459;/*文字色*/
+    }
+
+    h2#building:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f1ad";/*アイコンのユニコード*/
+    font-weight: 900;
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0;/*アイコンの位置*/
+    top: 0;/*アイコンの位置*/
+    color: #000000; /*アイコン色*/
+    }
+     h2#train  {
+    position: relative;/*相対位置*/
+    padding-left: 1.2em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #7b6459;/*文字色*/
+    }
+
+    h2#train:before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f238";/*アイコンのユニコード*/
+    font-weight: 900;
+    position: absolute;/*絶対位置*/
+    font-size: 1em;/*サイズ*/
+    left: 0;/*アイコンの位置*/
+    top: 0;/*アイコンの位置*/
+    color: #000000; /*アイコン色*/
+    }
+    </style>
 </head>
 
 <body>
@@ -17,19 +72,161 @@
     <!-- shadow-intensity: model-viewerの照明による陰影の強度(デフォルト:0, 1に近いほど値が1に近いほど、陰影の濃さがます) -->
     <!-- camera-controls: 3Dモデルを操作するためのカメラコントロールを有効 -->
     <!-- touch-action: モバイル端末で3Dモデルをタッチ操作する場合のブラウザのデフォルトのタッチアクションを変更  -->
+    <h1>3Dモデル一覧</h1>
+    <h2 id="human">ツン</h2>
     <model-viewer
         alt=""
-        src="model\Character_blue.glb"
+        src="model\tun.glb"
         ar
         poster="shared-assets/models/NeilArmstrong.webp"
         shadow-intensity="1" 
         camera-controls 
         touch-action="pan-y">
     </model-viewer>
-
+    <h2 id="train">桜島フェリー</h2>
+    <model-viewer
+        alt=""
+        src="model\sakurajimaferi.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h2 id="train">鹿児島市電</h2>
+    <model-viewer
+        alt=""
+        src="model\kagosimasiden.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h2 id="train">鹿児島市電２</h2>
+    <model-viewer
+        alt=""
+        src="model\kagoshimashiden 2.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">温泉</h2>
+    <model-viewer
+        alt=""
+        src="model\onnsenn.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h2 id="building">アミュ</h2>
     <model-viewer
         alt=""
         src="model\amu kanransya.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h2 id="building">アミュラン</h2>
+    <model-viewer
+        alt=""
+        src="model\amu.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+      <h2 id="building">水族館</h2>
+    <model-viewer
+        alt=""
+        src="model\suizokukann.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h2 id="building">御楼門</h2>
+    <model-viewer
+        alt=""
+        src="model\goromon.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">白波スタジアム</h2>
+    <model-viewer
+        alt=""
+        src="model\siranamisutajiamu.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">平川動物公園</h2>
+    <model-viewer
+        alt=""
+        src="model\hirakawadoubutuen.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">仙厳園</h2>
+    <model-viewer
+        alt=""
+        src="model\senngannenn.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">科学館</h2>
+    <model-viewer
+        alt=""
+        src="model\kagakukan.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">県庁</h2>
+    <model-viewer
+        alt=""
+        src="model\kentyou.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+     <h2 id="building">仙厳園一部</h2>
+    <model-viewer
+        alt=""
+        src="model\senngannenn2.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h2 id="building">御楼門一部</h2>
+    <model-viewer
+        alt=""
+        src="model\goromon1.glb"
         ar
         poster="shared-assets/models/NeilArmstrong.webp"
         shadow-intensity="1" 
