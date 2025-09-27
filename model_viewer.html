@@ -100,6 +100,10 @@
     top: 0;/*アイコンの位置*/
     color: #000000; /*アイコン色*/
     }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+    }
     </style>
 </head>
 
@@ -136,247 +140,300 @@
     </model-viewer>
 
     <h1>3Dモデル一覧</h1>
-    <h2 id="food">桜島大根</h2>
-    <model-viewer
-        alt=""
-        src="model\sakurajimadaikon.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="human">西郷隆盛</h2>
-    <model-viewer
-        alt=""
-        src="model\saigotakamori.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="animal">ツン</h2>
-    <model-viewer
-        alt=""
-        src="model\tsun.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="human">大久保利通</h2>
-    <model-viewer
-        alt=""
-        src="model/okubotoshimichi.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="human">篤姫</h2>
-    <model-viewer
-        alt=""
-        src="model\atsuhime.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="human">鹿児島大学学長</h2>
-    <model-viewer
-        alt=""
-        src="model\gakutyou.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="human">ぐりぶー</h2>
-    <model-viewer
-        alt=""
-        src="model\guribu.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="human">さくら</h2>
-    <model-viewer
-        alt=""
-        src="model\sakura.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="human">さっつん</h2>
-    <model-viewer
-        alt=""
-        src="model\sattun.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="animal">イルカ（ピンク）</h2>
-    <model-viewer
-        alt=""
-        src="model\iruka1.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="animal">イルカ（黄）</h2>
-    <model-viewer
-        alt=""
-        src="model\iruka2.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="animal">イルカ（黒）</h2>
-    <model-viewer
-        alt=""
-        src="model\iruka3.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="train">桜島フェリー</h2>
-    <h3 class="creator">制作者:上籠健人</h3>
-    <model-viewer
-        alt=""
-        src="model\sakurajimaferry.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="train">鹿児島市電</h2>
-    <model-viewer
-        alt=""
-        src="model\kagoshimashiden1.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="train">鹿児島市電２</h2>
-    <model-viewer
-        alt=""
-        src="model\kagoshimashiden2.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="building">温泉</h2>
-    <model-viewer
-        alt=""
-        src="model\onsen.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="building">アミュラン</h2>
-    <model-viewer
-        alt=""
-        src="model\amuran-1.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-      <h2 id="building">水族館</h2>
-    <model-viewer
-        alt=""
-        src="model\suizokukan.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-    <h2 id="building">御楼門</h2>
-    <model-viewer
-        alt=""
-        src="model\goromon.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="building">白波スタジアム</h2>
-    <model-viewer
-        alt=""
-        src="model\shiranamisutajiamu.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="building">平川動物公園</h2>
-    <model-viewer
-        alt=""
-        src="model\hirakawadoubutsuen.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="building">仙厳園</h2>
-    <model-viewer
-        alt=""
-        src="model\senganen.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="building">科学館</h2>
-    <model-viewer
-        alt=""
-        src="model\kagakukan.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-     <h2 id="building">県庁</h2>
-    <model-viewer
-        alt=""
-        src="model\kentyou.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
+
+    <div class="container">
+    
+        
+     <div>
+         <h2 id="food">桜島大根</h2>
+         <model-viewer
+             alt=""
+             src="model\sakurajimadaikon.glb"
+             ar
+             poster="shared-assets/models/NeilArmstrong.webp"
+             shadow-intensity="1" 
+             camera-controls 
+             touch-action="pan-y">
+         </model-viewer>
+     </div>
+      <div>
+          <h2 id="human">西郷隆盛</h2>
+          <model-viewer
+              alt=""
+              src="model\saigotakamori.glb"
+              ar
+              poster="shared-assets/models/NeilArmstrong.webp"
+              shadow-intensity="1" 
+              camera-controls 
+              touch-action="pan-y">
+          </model-viewer>
+      </div>
+      <div>
+          <h2 id="animal">ツン</h2>
+          <model-viewer
+              alt=""
+              src="model\tsun.glb"
+              ar
+              poster="shared-assets/models/NeilArmstrong.webp"
+              shadow-intensity="1" 
+              camera-controls 
+              touch-action="pan-y">
+          </model-viewer>
+      </div>
+      <div>
+          <h2 id="human">大久保利通</h2>
+         <model-viewer
+             alt=""
+             src="model/okubotoshimichi.glb"
+             ar
+             poster="shared-assets/models/NeilArmstrong.webp"
+             shadow-intensity="1" 
+             camera-controls 
+             touch-action="pan-y">
+         </model-viewer>
+      </div>
+      <div>
+          <h2 id="human">篤姫</h2>
+          <model-viewer
+              alt=""
+              src="model\atsuhime.glb"
+              ar
+              poster="shared-assets/models/NeilArmstrong.webp"
+              shadow-intensity="1" 
+              camera-controls 
+              touch-action="pan-y">
+          </model-viewer>
+      </div>
+      <div>
+          <h2 id="human">鹿児島大学学長</h2>
+         <model-viewer
+             alt=""
+             src="model\gakutyou.glb"
+             ar
+             poster="shared-assets/models/NeilArmstrong.webp"
+             shadow-intensity="1" 
+             camera-controls 
+             touch-action="pan-y">
+         </model-viewer>
+      </div>
+      <div>
+          <h2 id="human">ぐりぶー</h2>
+         <model-viewer
+             alt=""
+             src="model\guribu.glb"
+             ar
+             poster="shared-assets/models/NeilArmstrong.webp"
+             shadow-intensity="1" 
+             camera-controls 
+             touch-action="pan-y">
+         </model-viewer>
+      </div>
+       <div>
+           <h2 id="human">さくら</h2>
+          <model-viewer
+              alt=""
+              src="model\sakura.glb"
+              ar
+              poster="shared-assets/models/NeilArmstrong.webp"
+              shadow-intensity="1" 
+              camera-controls 
+              touch-action="pan-y">
+          </model-viewer>
+       </div>
+       <div>
+           <h2 id="human">さっつん</h2>
+          <model-viewer
+              alt=""
+              src="model\sattun.glb"
+              ar
+              poster="shared-assets/models/NeilArmstrong.webp"
+              shadow-intensity="1" 
+              camera-controls 
+              touch-action="pan-y">
+          </model-viewer>
+       </div>
+        <div>
+            <h2 id="animal">イルカ（ピンク）</h2>
+            <model-viewer
+                alt=""
+                src="model\iruka1.glb"
+                ar
+                poster="shared-assets/models/NeilArmstrong.webp"
+                shadow-intensity="1" 
+                camera-controls 
+                touch-action="pan-y">
+            </model-viewer>
+        </div>
+        <div>
+            <h2 id="animal">イルカ（黄）</h2>
+            <model-viewer
+                alt=""
+                src="model\iruka2.glb"
+                ar
+                poster="shared-assets/models/NeilArmstrong.webp"
+                shadow-intensity="1" 
+                camera-controls 
+                touch-action="pan-y">
+            </model-viewer>
+        </div>
+        <div>
+            <h2 id="animal">イルカ（黒）</h2>
+            <model-viewer
+                alt=""
+                src="model\iruka3.glb"
+                ar
+                poster="shared-assets/models/NeilArmstrong.webp"
+                shadow-intensity="1" 
+                camera-controls 
+                touch-action="pan-y">
+            </model-viewer>
+        </div>
+         <div>
+             <h2 id="train">桜島フェリー</h2>
+             <h3 class="creator">制作者:上籠健人</h3>
+             <model-viewer
+                 alt=""
+                 src="model\sakurajimaferry.glb"
+                 ar
+                 poster="shared-assets/models/NeilArmstrong.webp"
+                 shadow-intensity="1" 
+                 camera-controls 
+                 touch-action="pan-y">
+             </model-viewer>
+         </div>
+          <div>
+              <h2 id="train">鹿児島市電</h2>
+              <model-viewer
+                  alt=""
+                  src="model\kagoshimashiden1.glb"
+                  ar
+                  poster="shared-assets/models/NeilArmstrong.webp"
+                  shadow-intensity="1" 
+                  camera-controls 
+                  touch-action="pan-y">
+              </model-viewer>
+          </div>
+          <div>
+              <h2 id="train">鹿児島市電２</h2>
+              <model-viewer
+                  alt=""
+                  src="model\kagoshimashiden2.glb"
+                  ar
+                  poster="shared-assets/models/NeilArmstrong.webp"
+                  shadow-intensity="1" 
+                  camera-controls 
+                  touch-action="pan-y">
+              </model-viewer>
+          </div>
+          <div>
+              <h2 id="building">温泉</h2>
+             <model-viewer
+                 alt=""
+                 src="model\onsen.glb"
+                 ar
+                 poster="shared-assets/models/NeilArmstrong.webp"
+                 shadow-intensity="1" 
+                 camera-controls 
+                 touch-action="pan-y">
+             </model-viewer>
+          </div>
+          <div>
+              <h2 id="building">アミュラン</h2>
+              <model-viewer
+                  alt=""
+                  src="model\amuran-1.glb"
+                  ar
+                  poster="shared-assets/models/NeilArmstrong.webp"
+                  shadow-intensity="1" 
+                  camera-controls 
+                  touch-action="pan-y">
+              </model-viewer>
+          </div>
+           <div>
+               <h2 id="building">水族館</h2>
+             <model-viewer
+                 alt=""
+                 src="model\suizokukan.glb"
+                 ar
+                 poster="shared-assets/models/NeilArmstrong.webp"
+                 shadow-intensity="1" 
+                 camera-controls 
+                 touch-action="pan-y">
+             </model-viewer>
+           </div>
+           <div>
+               <h2 id="building">御楼門</h2>
+               <model-viewer
+                   alt=""
+                   src="model\goromon.glb"
+                   ar
+                   poster="shared-assets/models/NeilArmstrong.webp"
+                   shadow-intensity="1" 
+                   camera-controls 
+                   touch-action="pan-y">
+               </model-viewer>
+           </div>
+           <div>
+               <h2 id="building">白波スタジアム</h2>
+              <model-viewer
+                  alt=""
+                  src="model\shiranamisutajiamu.glb"
+                  ar
+                  poster="shared-assets/models/NeilArmstrong.webp"
+                  shadow-intensity="1" 
+                  camera-controls 
+                  touch-action="pan-y">
+              </model-viewer>
+           </div>
+            <div>
+                <h2 id="building">平川動物公園</h2>
+               <model-viewer
+                   alt=""
+                   src="model\hirakawadoubutsuen.glb"
+                   ar
+                   poster="shared-assets/models/NeilArmstrong.webp"
+                   shadow-intensity="1" 
+                   camera-controls 
+                   touch-action="pan-y">
+               </model-viewer>
+            </div>
+            <div>
+                <h2 id="building">仙厳園</h2>
+               <model-viewer
+                   alt=""
+                   src="model\senganen.glb"
+                   ar
+                   poster="shared-assets/models/NeilArmstrong.webp"
+                   shadow-intensity="1" 
+                   camera-controls 
+                   touch-action="pan-y">
+               </model-viewer>
+            </div>
+            <div>
+                <h2 id="building">科学館</h2>
+               <model-viewer
+                   alt=""
+                   src="model\kagakukan.glb"
+                   ar
+                   poster="shared-assets/models/NeilArmstrong.webp"
+                   shadow-intensity="1" 
+                   camera-controls 
+                   touch-action="pan-y">
+               </model-viewer>
+            </div>
+            <div>
+                <h2 id="building">県庁</h2>
+               <model-viewer
+                   alt=""
+                   src="model\kentyou.glb"
+                   ar
+                   poster="shared-assets/models/NeilArmstrong.webp"
+                   shadow-intensity="1" 
+                   camera-controls 
+                   touch-action="pan-y">
+               </model-viewer>
+            </div>
+    </div>
 </body>
 
 </html>
