@@ -11,16 +11,16 @@
     <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
     <style>
     h1 {
-    font-family: "M PLUS Rounded 1c", sans-serif;
-    font-weight: 800;
-    font-style: normal;
+        font-family: "M PLUS Rounded 1c", sans-serif;
+        font-weight: 800;
+        font-style: normal;
     }
 
     h2#human {
-    position: relative;/*相対位置*/
-    padding-left: 1.2em;/*アイコン分のスペース*/
-    line-height: 1.4;/*行高*/
-    color: #7b6459;/*文字色*/
+        position: relative;/*相対位置*/
+        padding-left: 1.2em;/*アイコン分のスペース*/
+        line-height: 1.4;/*行高*/
+        color: #7b6459;/*文字色*/
     }
     h2#human:before {
     font-family: "Font Awesome 5 Free";
@@ -104,6 +104,27 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    div{
+        max-width: 100vh;
+    }
+
+
+    p  {
+    position: relative;/*相対位置*/
+    padding-left: 1.5em;/*アイコン分のスペース*/
+    line-height: 1.4;/*行高*/
+    color: #7b6459;/*文字色*/
+    text-align: right;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    div#test{
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -128,22 +149,9 @@
     </menu>
 </header>
 
-    <h2>さっつん</h2>
-    <model-viewer
-        alt=""
-        src="model\sattun.glb"
-        ar
-        poster="shared-assets/models/NeilArmstrong.webp"
-        shadow-intensity="1" 
-        camera-controls 
-        touch-action="pan-y">
-    </model-viewer>
-
     <h1>3Dモデル一覧</h1>
 
-    <div class="container">
-    
-        
+    <section class="container">
      <div>
          <h2 id="food">桜島大根</h2>
          <model-viewer
@@ -155,6 +163,7 @@
              camera-controls 
              touch-action="pan-y">
          </model-viewer>
+        <p class="creator"><i class="fas fa-user-edit"></i>制作者:上籠健人</p>
      </div>
       <div>
           <h2 id="human">西郷隆盛</h2>
@@ -290,7 +299,6 @@
         </div>
          <div>
              <h2 id="train">桜島フェリー</h2>
-             <h3 class="creator">制作者:上籠健人</h3>
              <model-viewer
                  alt=""
                  src="model\sakurajimaferry.glb"
@@ -300,6 +308,7 @@
                  camera-controls 
                  touch-action="pan-y">
              </model-viewer>
+             <p class="creator">制作者:上籠健人</p>
          </div>
           <div>
               <h2 id="train">鹿児島市電</h2>
@@ -433,7 +442,7 @@
                    touch-action="pan-y">
                </model-viewer>
             </div>
-    </div>
+    </section>
 </body>
 
 </html>
