@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=M+PLUS+Rounded+1c:wght@400;800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+    <style>
+    body {
+        margin: 0;
+        font-family: "M PLUS Rounded 1c", sans-serif;
+    }
+    h1 {
+        font-weight: 800;
+        font-style: normal;
+    }
+    h2#human {
+        position: relative;/*相対位置*/
+        padding-left: 1.2em;/*アイコン分のスペース*/
+        line-height: 1.4;/*行高*/
+        color: #7b6459;/*文字色*/
+    }
+    h2#human:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f007";/*アイコンのユニコード*/
+        font-weight: 900;
+        position: absolute;/*絶対位置*/
+        font-size: 1em;/*サイズ*/
+        left: 0;/*アイコンの位置*/
+        top: 0;/*アイコンの位置*/
+        color: #000000; /*アイコン色*/
+    }
+
+    h2#building  {
+        position: relative;/*相対位置*/
+        padding-left: 1.2em;/*アイコン分のスペース*/
+        line-height: 1.4;/*行高*/
+        color: #7b6459;/*文字色*/
+    }
+    h2#building:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f1ad";/*アイコンのユニコード*/
+        font-weight: 900;
+        position: absolute;/*絶対位置*/
+        font-size: 1em;/*サイズ*/
+        left: 0;/*アイコンの位置*/
+        top: 0;/*アイコンの位置*/
+        color: #000000; /*アイコン色*/
+    }
+
+    h2#train  {
+        position: relative;/*相対位置*/
+        padding-left: 1.2em;/*アイコン分のスペース*/
+        line-height: 1.4;/*行高*/
+        color: #7b6459;/*文字色*/
+    }
+    h2#train:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f238";/*アイコンのユニコード*/
+        font-weight: 900;
+        position: absolute;/*絶対位置*/
+        font-size: 1em;/*サイズ*/
+        left: 0;/*アイコンの位置*/
+        top: 0;/*アイコンの位置*/
+        color: #000000; /*アイコン色*/
+    }
+
+    h2#food  {
+        position: relative;/*相対位置*/
+        padding-left: 1.2em;/*アイコン分のスペース*/
+        line-height: 1.4;/*行高*/
+        color: #7b6459;/*文字色*/
+    }
+    h2#food:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f2e7";/*アイコンのユニコード*/
+        font-weight: 900;
+        position: absolute;/*絶対位置*/
+        font-size: 1em;/*サイズ*/
+        left: 0;/*アイコンの位置*/
+        top: 0;/*アイコンの位置*/
+        color: #000000; /*アイコン色*/
+    }
+
+    h2#animal  {
+        position: relative;/*相対位置*/
+        padding-left: 1.2em;/*アイコン分のスペース*/
+        line-height: 1.4;/*行高*/
+        color: #7b6459;/*文字色*/
+    }
+    h2#animal:before {
+        font-family: "Font Awesome 5 Free";
+        content: "\f1b0";/*アイコンのユニコード*/
+        font-weight: 900;
+        position: absolute;/*絶対位置*/
+        font-size: 1em;/*サイズ*/
+        left: 0;/*アイコンの位置*/
+        top: 0;/*アイコンの位置*/
+        color: #000000; /*アイコン色*/
+    }
+    .container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    model-viewer {
+        /* width: 400px; */
+        /* height: 90vh;
+        display: block; */
+    }
+
+    p {
+        color: #7b6459;/*文字色*/
+        text-align: right;
+    }
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded',()=>{
+            
+            console.log('search:'+location.search);
+            const params = new URLSearchParams(location.search);
+            const model = params.get('m');
+
+            const viewer = document.querySelector("model-viewer");
+            viewer.src="model/" + model +".glb";
+        });
+    </script>
+</head>
+
+<body>
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+    <!-- Use it like any other HTML element -->
+    <!-- poster: Loading用の画像 -->
+    <!-- environment-image: 画像で環境反射をシミュレート -->
+    <!-- shadow-intensity: model-viewerの照明による陰影の強度(デフォルト:0, 1に近いほど値が1に近いほど、陰影の濃さがます) -->
+    <!-- camera-controls: 3Dモデルを操作するためのカメラコントロールを有効 -->
+    <!-- touch-action: モバイル端末で3Dモデルをタッチ操作する場合のブラウザのデフォルトのタッチアクションを変更  -->
+
+<header>
+    <h1>鹿児島方言アドベンチャー</h1>
+
+</header>
+
+    <section class="container">
+     <div>
+         <h2 id="food">桜島大根</h2>
+         <model-viewer
+             alt=""
+             src="model\sakurajimadaikon.glb"
+             ar
+             poster="shared-assets/models/NeilArmstrong.webp"
+             shadow-intensity="1" 
+             camera-controls 
+             touch-action="pan-y">
+         </model-viewer>
+        <p class="creator"><i class="fas fa-user-edit"></i>制作者:上籠健人</p>
+     </div>
+    </section>
+</body>
+
+</html>
