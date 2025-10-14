@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>鹿児島方言アドベンチャー</title>
+    <meta name="description" content="鹿児島方言アドベンチャーの3Dモデルを表示しよう！">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=M+PLUS+Rounded+1c:wght@400;800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+    <meta property="og:title" content="鹿児島方言アドベンチャー">
+    <meta property="og:site_name" content="鹿児島方言アドベンチャー">
+    <meta property="og:description" content="鹿児島方言アドベンチャーの3Dモデルを表示しよう！">
+    <meta property="og:image" content="https://adven-map-kadai.github.io/">
+    <meta property="og:type" content="website">
     <style>
     body {
         margin: 0;
@@ -17,90 +23,39 @@
     h1 {
         font-weight: 800;
         font-style: normal;
+        text-align: center;
     }
-    h2#human {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
+    h2 {
+        font-weight: 600;
         color: #7b6459;/*文字色*/
+        text-align: left;
     }
-    h2#human:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f007";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#building  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
+    h3 {
+        font-weight: 600;
         color: #7b6459;/*文字色*/
+        text-align: center;
     }
-    h2#building:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f1ad";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#train  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
+    h4 {
+        font-weight: 600;
         color: #7b6459;/*文字色*/
+        text-align: right;
     }
-    h2#train:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f238";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#food  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
+    header p {
+        font-weight: 600;
         color: #7b6459;/*文字色*/
+        text-align: center;
     }
-    h2#food:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f2e7";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#animal  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
+    header menu {
+        font-weight: 600;
         color: #7b6459;/*文字色*/
+        text-align: center;
     }
-    h2#animal:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f1b0";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
+    header menu ul {
+        list-style: none;
+        padding: 0 0 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
     .container{
         display: flex;
@@ -112,18 +67,93 @@
         /* height: 90vh;
         display: block; */
     }
-
-    p {
-        color: #7b6459;/*文字色*/
-        text-align: right;
+    /* ボタンは下に固定 */
+    button {
+        width: 80px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    button:hover {
+        background: #0056b3;
+    }
+    .controls {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const viewer = document.querySelector("model-viewer");
+
+        // アニメーション切り替え
+        function setAnimation(name) {
+            viewer.animationName = name;
+            viewer.paused = false;
+            console.log("再生中:", name);
+        }
+
+        // 読み込み時にアニメーション一覧確認
+        viewer.addEventListener("model-visibility", () => {
+            console.log("利用可能アニメーション:", viewer.availableAnimations);
+            // Idle があれば自動再生する
+            if (viewer.availableAnimations.includes("Idle")) {
+                setAnimation("Idle");
+            }
+        });
+
+        // モデルクリック時にアニメーション再生
+        // viewer.addEventListener("click", () => {
+        //   // 例: Idleアニメーションを再生
+        //   if (viewer.availableAnimations && viewer.availableAnimations.length > 0) {
+        //     setAnimation(viewer.availableAnimations[0]);
+        //   }
+
+        //   // 再生開始
+        //   // viewer.play();
+        //   // viewer.play({animationName: 'Welcome'}); //ループ
+        //   // viewer.play({animationName: 'Welcome', repetitions: 1}); //1回ループ
+        //   // viewer.pause();
+        // });
+
+        // すべてのモデル切り替えボタンにイベントを設定
+        document.querySelectorAll('.controls button[data-model]').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // ボタンの親（controls）の前の兄弟要素（model-viewer）を取得
+                const viewer = btn.parentElement.previousElementSibling;
+                if (viewer && viewer.tagName === 'MODEL-VIEWER') {
+                    viewer.src = "model/" + btn.dataset.model + ".glb";
+                    viewer.animationName = null;
+                }
+            });
+        });
+    });
+    </script>
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 
 <body>
-    <!-- Import the component -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<header>
+    <h1>鹿児島方言アドベンチャー<br>3Dモデル一覧</h1>
 
+    <menu>
+        <ul>
+            <li><a href="#character">キャラクター</a></li>
+            <li><a href="#animal">動物</a></li>
+            <li><a href="#food">食べ物</a></li>
+            <li><a href="#vehicle">乗り物</a></li>
+            <li><a href="#landmark">ランドマーク</a></li>
+        </ul>
+    </menu>
+
+    <p>3Dモデルをクリック・タップして、回転・拡大縮小してみよう！</p>
+</header>
     <!-- Use it like any other HTML element -->
     <!-- poster: Loading用の画像 -->
     <!-- environment-image: 画像で環境反射をシミュレート -->
@@ -131,310 +161,310 @@
     <!-- camera-controls: 3Dモデルを操作するためのカメラコントロールを有効 -->
     <!-- touch-action: モバイル端末で3Dモデルをタッチ操作する場合のブラウザのデフォルトのタッチアクションを変更  -->
 
-<header>
-    <h1>鹿児島方言アドベンチャー</h1>
 
-    <menu>
-        <li><a href="#food">食べ物</a></li>
-        <li><a href="#human">人間</a></li>
-        <li><a href="#animal">動物</a></li>
-    </menu>
-</header>
+<h3 id="character">キャラクター</h3>
+<section class="container">
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-paw"></i>さっつん</h2>
+        <model-viewer
+            alt=""
+            src="model\sattun.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-user"></i>西郷隆盛</h2>
+        <model-viewer
+            alt=""
+            src="model\saigotakamori.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-user"></i>大久保利通</h2>
+        <model-viewer
+            alt=""
+            src="model/okubotoshimichi.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-user"></i>篤姫</h2>
+        <model-viewer
+            alt=""
+            src="model\atsuhime.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-user"></i>鹿児島大学学長</h2>
+        <model-viewer
+            alt=""
+            src="model\gakutyou.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-paw"></i>ぐりぶー</h2>
+        <model-viewer
+            alt=""
+            src="model\guribu.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-paw"></i>さくら</h2>
+        <model-viewer
+            alt=""
+            src="model\sakura.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+</section>
 
-    <h1>3Dモデル一覧</h1>
+<h3 id="animal">動物</h3>
+<section class="container">
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-paw"></i>ツン</h2>
+        <model-viewer
+            alt=""
+            src="model\tsun.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-paw"></i>イルカ</h2>
+        <model-viewer
+            alt=""
+            src="model\iruka1.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <!-- モデル切り替え -->
+        <div class="controls">
+            <button data-model="iruka1">ピンク</button>
+            <button data-model="iruka2">黄</button>
+            <button data-model="iruka3">黒</button>
+        </div>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+</section>
 
-    <section class="container">
-     <div>
-         <h2 id="food">桜島大根</h2>
-         <model-viewer
-             alt=""
-             src="model\sakurajimadaikon.glb"
-             ar
-             poster="shared-assets/models/NeilArmstrong.webp"
-             shadow-intensity="1" 
-             camera-controls 
-             touch-action="pan-y">
-         </model-viewer>
-        <p class="creator"><i class="fas fa-user-edit"></i>制作者:上籠健人</p>
-     </div>
-      <div>
-          <h2 id="human">西郷隆盛</h2>
-          <model-viewer
-              alt=""
-              src="model\saigotakamori.glb"
-              ar
-              poster="shared-assets/models/NeilArmstrong.webp"
-              shadow-intensity="1" 
-              camera-controls 
-              touch-action="pan-y">
-          </model-viewer>
-      </div>
-      <div>
-          <h2 id="animal">ツン</h2>
-          <model-viewer
-              alt=""
-              src="model\tsun.glb"
-              ar
-              poster="shared-assets/models/NeilArmstrong.webp"
-              shadow-intensity="1" 
-              camera-controls 
-              touch-action="pan-y">
-          </model-viewer>
-      </div>
-      <div>
-          <h2 id="human">大久保利通</h2>
-         <model-viewer
-             alt=""
-             src="model/okubotoshimichi.glb"
-             ar
-             poster="shared-assets/models/NeilArmstrong.webp"
-             shadow-intensity="1" 
-             camera-controls 
-             touch-action="pan-y">
-         </model-viewer>
-      </div>
-      <div>
-          <h2 id="human">篤姫</h2>
-          <model-viewer
-              alt=""
-              src="model\atsuhime.glb"
-              ar
-              poster="shared-assets/models/NeilArmstrong.webp"
-              shadow-intensity="1" 
-              camera-controls 
-              touch-action="pan-y">
-          </model-viewer>
-      </div>
-      <div>
-          <h2 id="human">鹿児島大学学長</h2>
-         <model-viewer
-             alt=""
-             src="model\gakutyou.glb"
-             ar
-             poster="shared-assets/models/NeilArmstrong.webp"
-             shadow-intensity="1" 
-             camera-controls 
-             touch-action="pan-y">
-         </model-viewer>
-      </div>
-      <div>
-          <h2 id="human">ぐりぶー</h2>
-         <model-viewer
-             alt=""
-             src="model\guribu.glb"
-             ar
-             poster="shared-assets/models/NeilArmstrong.webp"
-             shadow-intensity="1" 
-             camera-controls 
-             touch-action="pan-y">
-         </model-viewer>
-      </div>
-       <div>
-           <h2 id="human">さくら</h2>
-          <model-viewer
-              alt=""
-              src="model\sakura.glb"
-              ar
-              poster="shared-assets/models/NeilArmstrong.webp"
-              shadow-intensity="1" 
-              camera-controls 
-              touch-action="pan-y">
-          </model-viewer>
-       </div>
-       <div>
-           <h2 id="human">さっつん</h2>
-          <model-viewer
-              alt=""
-              src="model\sattun.glb"
-              ar
-              poster="shared-assets/models/NeilArmstrong.webp"
-              shadow-intensity="1" 
-              camera-controls 
-              touch-action="pan-y">
-          </model-viewer>
-       </div>
-        <div>
-            <h2 id="animal">イルカ（ピンク）</h2>
-            <model-viewer
-                alt=""
-                src="model\iruka1.glb"
-                ar
-                poster="shared-assets/models/NeilArmstrong.webp"
-                shadow-intensity="1" 
-                camera-controls 
-                touch-action="pan-y">
-            </model-viewer>
+<h3 id="food">食べ物</h3>
+<section class="container">
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-apple-whole"></i>桜島大根</h2>
+        <model-viewer
+            alt=""
+            src="model\sakurajimadaikon.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+</section>
+
+<h3 id="vehicle">乗り物</h3>
+<section class="container">
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-train-subway"></i>鹿児島市電</h2>
+        <model-viewer
+            alt=""
+            src="model\kagoshimashiden1.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <!-- モデル切り替え -->
+        <div class="controls">
+            <button data-model="kagoshimashiden1">市電1</button>
+            <button data-model="kagoshimashiden2">市電2</button>
         </div>
-        <div>
-            <h2 id="animal">イルカ（黄）</h2>
-            <model-viewer
-                alt=""
-                src="model\iruka2.glb"
-                ar
-                poster="shared-assets/models/NeilArmstrong.webp"
-                shadow-intensity="1" 
-                camera-controls 
-                touch-action="pan-y">
-            </model-viewer>
-        </div>
-        <div>
-            <h2 id="animal">イルカ（黒）</h2>
-            <model-viewer
-                alt=""
-                src="model\iruka3.glb"
-                ar
-                poster="shared-assets/models/NeilArmstrong.webp"
-                shadow-intensity="1" 
-                camera-controls 
-                touch-action="pan-y">
-            </model-viewer>
-        </div>
-         <div>
-             <h2 id="train">桜島フェリー</h2>
-             <model-viewer
-                 alt=""
-                 src="model\sakurajimaferry.glb"
-                 ar
-                 poster="shared-assets/models/NeilArmstrong.webp"
-                 shadow-intensity="1" 
-                 camera-controls 
-                 touch-action="pan-y">
-             </model-viewer>
-             <p class="creator">制作者:上籠健人</p>
-         </div>
-          <div>
-              <h2 id="train">鹿児島市電</h2>
-              <model-viewer
-                  alt=""
-                  src="model\kagoshimashiden1.glb"
-                  ar
-                  poster="shared-assets/models/NeilArmstrong.webp"
-                  shadow-intensity="1" 
-                  camera-controls 
-                  touch-action="pan-y">
-              </model-viewer>
-          </div>
-          <div>
-              <h2 id="train">鹿児島市電２</h2>
-              <model-viewer
-                  alt=""
-                  src="model\kagoshimashiden2.glb"
-                  ar
-                  poster="shared-assets/models/NeilArmstrong.webp"
-                  shadow-intensity="1" 
-                  camera-controls 
-                  touch-action="pan-y">
-              </model-viewer>
-          </div>
-          <div>
-              <h2 id="building">温泉</h2>
-             <model-viewer
-                 alt=""
-                 src="model\onsen.glb"
-                 ar
-                 poster="shared-assets/models/NeilArmstrong.webp"
-                 shadow-intensity="1" 
-                 camera-controls 
-                 touch-action="pan-y">
-             </model-viewer>
-          </div>
-          <div>
-              <h2 id="building">アミュラン</h2>
-              <model-viewer
-                  alt=""
-                  src="model\amuran-1.glb"
-                  ar
-                  poster="shared-assets/models/NeilArmstrong.webp"
-                  shadow-intensity="1" 
-                  camera-controls 
-                  touch-action="pan-y">
-              </model-viewer>
-          </div>
-           <div>
-               <h2 id="building">水族館</h2>
-             <model-viewer
-                 alt=""
-                 src="model\suizokukan.glb"
-                 ar
-                 poster="shared-assets/models/NeilArmstrong.webp"
-                 shadow-intensity="1" 
-                 camera-controls 
-                 touch-action="pan-y">
-             </model-viewer>
-           </div>
-           <div>
-               <h2 id="building">御楼門</h2>
-               <model-viewer
-                   alt=""
-                   src="model\goromon.glb"
-                   ar
-                   poster="shared-assets/models/NeilArmstrong.webp"
-                   shadow-intensity="1" 
-                   camera-controls 
-                   touch-action="pan-y">
-               </model-viewer>
-           </div>
-           <div>
-               <h2 id="building">白波スタジアム</h2>
-              <model-viewer
-                  alt=""
-                  src="model\shiranamisutajiamu.glb"
-                  ar
-                  poster="shared-assets/models/NeilArmstrong.webp"
-                  shadow-intensity="1" 
-                  camera-controls 
-                  touch-action="pan-y">
-              </model-viewer>
-           </div>
-            <div>
-                <h2 id="building">平川動物公園</h2>
-               <model-viewer
-                   alt=""
-                   src="model\hirakawadoubutsuen.glb"
-                   ar
-                   poster="shared-assets/models/NeilArmstrong.webp"
-                   shadow-intensity="1" 
-                   camera-controls 
-                   touch-action="pan-y">
-               </model-viewer>
-            </div>
-            <div>
-                <h2 id="building">仙厳園</h2>
-               <model-viewer
-                   alt=""
-                   src="model\senganen.glb"
-                   ar
-                   poster="shared-assets/models/NeilArmstrong.webp"
-                   shadow-intensity="1" 
-                   camera-controls 
-                   touch-action="pan-y">
-               </model-viewer>
-            </div>
-            <div>
-                <h2 id="building">科学館</h2>
-               <model-viewer
-                   alt=""
-                   src="model\kagakukan.glb"
-                   ar
-                   poster="shared-assets/models/NeilArmstrong.webp"
-                   shadow-intensity="1" 
-                   camera-controls 
-                   touch-action="pan-y">
-               </model-viewer>
-            </div>
-            <div>
-                <h2 id="building">県庁</h2>
-               <model-viewer
-                   alt=""
-                   src="model\kentyou.glb"
-                   ar
-                   poster="shared-assets/models/NeilArmstrong.webp"
-                   shadow-intensity="1" 
-                   camera-controls 
-                   touch-action="pan-y">
-               </model-viewer>
-            </div>
-    </section>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-ferry"></i></i>桜島フェリー</h2>
+        <model-viewer
+            alt=""
+            src="model\sakurajimaferry.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+</section>
+
+<h3 id="landmark">ランドマーク</h3>
+<section class="container">
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>アミュプラザ鹿児島</h2>
+        <model-viewer
+            alt=""
+            src="model\amuran-1.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>かごしま水族館</h2>
+        <model-viewer
+            alt=""
+            src="model\suizokukan.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>平川動物公園</h2>
+        <model-viewer
+            alt=""
+            src="model\hirakawadoubutsuen.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>仙厳園</h2>
+        <model-viewer
+            alt=""
+            src="model\senganen.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>鶴丸城 御楼門</h2>
+        <model-viewer
+            alt=""
+            src="model\goromon.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>温泉</h2>
+        <model-viewer
+            alt=""
+            src="model\onsen.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>鴨池陸上競技場</h2>
+        <model-viewer
+            alt=""
+            src="model\shiranamisutajiamu.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>科学館</h2>
+        <model-viewer
+            alt=""
+            src="model\kagakukan.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+    <div>
+        <h2 class="model_name"><i class="fa-solid fa-landmark"></i>県庁</h2>
+        <model-viewer
+            alt=""
+            src="model\kentyou.glb"
+            ar
+            poster="shared-assets/models/NeilArmstrong.webp"
+            shadow-intensity="1" 
+            camera-controls 
+            touch-action="pan-y">
+        </model-viewer>
+        <h4><i class="fas fa-user-edit"></i>クリエイター：<span class="creator_name">鹿児島大学</span></h4>
+    </div>
+</section>
 </body>
 
 </html>
