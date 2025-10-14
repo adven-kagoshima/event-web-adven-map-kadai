@@ -108,9 +108,9 @@
         justify-content: center;
     }
     model-viewer {
-        /* width: 400px; */
-        /* height: 90vh;
-        display: block; */
+        width: 100vw;
+        height: 90vh;
+        display: block;
     }
 
     p {
@@ -119,16 +119,28 @@
     }
     </style>
     <script>
+    const model_data = { 
+        "apple": [100, 120, 140],
+        "banana": [100, 120, 140],
+        "orange": [100, 120, 140]
+    };
 
-        document.addEventListener('DOMContentLoaded',()=>{
-            
-            console.log('search:'+location.search);
-            const params = new URLSearchParams(location.search);
-            const model = params.get('m');
+    const key = "banana";
+    if (key in model_data) {
+        const value = model_data[key];
+        console.log(`${key} の値は ${value} です。`);
+    } else {
+        console.log(`${key} は辞書にありません。`);
+    }
 
-            const viewer = document.querySelector("model-viewer");
-            viewer.src="model/" + model +".glb";
-        });
+    document.addEventListener('DOMContentLoaded',()=>{
+        console.log('search:'+location.search);
+        const params = new URLSearchParams(location.search);
+        const model = params.get('m');
+
+        const viewer = document.querySelector("model-viewer");
+        viewer.src="model/" + model +".glb";
+    });
     </script>
 </head>
 
