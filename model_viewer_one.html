@@ -25,6 +25,44 @@
     h1 {
         font-weight: 800;
         font-style: normal;
+        text-align: center;
+    }
+    h2 {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: left;
+    }
+    h3 {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
+    }
+    h4 {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: right;
+    }
+    header p {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
+    }
+    header menu {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
+    }
+    header menu ul {
+        list-style: none;
+        padding: 0 0 20px 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    footer p {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
     }
     .container{
         display: flex;
@@ -36,15 +74,11 @@
         height: 50vh;
         display: block;
     }
-    p {
-        color: #7b6459;/*文字色*/
-        text-align: right;
-    }
     </style>
     <script>
     const model_data = {
       "sattun": ["原囿晴", "さっつん"],
-      "amuran": ["原囿晴", "アミュプラザ鹿児島"],
+      "amu": ["原囿晴", "アミュプラザ鹿児島"],
       "shimazuyoshihiro": ["原囿晴", "島津義弘"],
       "sakurajimadaikon": ["髙倉秀真", "桜島大根"],
       "tsun": ["田中卓磨", "ツン"],
@@ -53,7 +87,7 @@
       "okubotoshimichi": ["梅山大智", "大久保利通"],
       "suizokukan": ["梅山大智", "かごしま水族館"],
       "hirakawadoubutsuen": ["梅山大智", "平川動物公園"],
-      "kagoshimashiden": ["梅木敢太", "鹿児島市電"],
+      "kagoshimashiden1": ["梅木敢太", "鹿児島市電"],
       "goromon": ["関康生", "鶴丸城 御楼門"],
       "senganen": ["田中創太", "仙巌園"],
       "gakutyou": ["野口しおり", "鹿児島大学学長"],
@@ -66,7 +100,7 @@
       "sakurajimaferry": ["上籠健人", "桜島フェリー"],
       "kentyou": ["坂本知太", "鹿児島県庁"],
       "oukan": ["大久保健太", "王冠"],
-      "iruka": ["谷口玲奈", "イルカ"],
+      "iruka1": ["谷口玲奈", "イルカ"],
       "atsuhime": ["谷口桃子", "篤姫"],
       "kagosimadaigaku": ["谷口桃子", "鹿児島大学"],
       "koara": ["宿里梨心", "コアラ"],
@@ -105,6 +139,8 @@
 <body>
 <header>
     <h1>鹿児島方言アドベンチャー</h1>
+
+    <p>3Dモデルをクリック・タップして、回転・拡大縮小してみよう！</p>
 </header>
 
 <section class="container">
@@ -128,32 +164,36 @@
         <h4><i class="fas fa-user-edit"></i>3Dモデルクリエイター:<span id="creator_name">鹿児島大学</span></h4>
     </div>
 </section>
-<a href="model_viewer_one.html?m=sattun">さっつん</a><br>
-<a href="model_viewer_one.html?m=amuran">アミュ</a><br>
-<a href="model_viewer_one.html?m=shimazuyoshihiro">島津義弘</a><br>
-<a href="model_viewer_one.html?m=sakurajimadaikon">桜島大根</a><br>
-<a href="model_viewer_one.html?m=tsun">ツン</a><br>
-<a href="model_viewer_one.html?m=satumaimo">さつまいも</a><br>
-<a href="model_viewer_one.html?m=arena">鹿児島アリーナ</a><br>
-<a href="model_viewer_one.html?m=okubotoshimichi">大久保利通</a><br>
-<a href="model_viewer_one.html?m=suizokukan">水族館</a><br>
-<a href="model_viewer_one.html?m=hirakawadoubutsuen">平川動物公園</a><br>
-<a href="model_viewer_one.html?m=kagoshimashiden">市電</a><br>
-<a href="model_viewer_one.html?m=goromon">鶴丸城 御楼門</a><br>
-<a href="model_viewer_one.html?m=senganen">仙巌園</a><br>
-<a href="model_viewer_one.html?m=gakutyou">学長</a><br>
-<a href="model_viewer_one.html?m=guribu">ぐりぶー</a><br>
-<a href="model_viewer_one.html?m=sakura">さくら</a><br>
-<a href="model_viewer_one.html?m=onsen">温泉</a><br>
-<a href="model_viewer_one.html?m=rurikakesu">ルリカケス</a><br>
-<a href="model_viewer_one.html?m=shiranamisutajiamu">鴨池陸上競技場</a><br>
-<a href="model_viewer_one.html?m=kagakukan">科学館</a><br>
-<a href="model_viewer_one.html?m=sakurajimaferry">桜島フェリー</a><br>
-<a href="model_viewer_one.html?m=kentyou">県庁</a><br>
-<a href="model_viewer_one.html?m=oukan">王冠</a><br>
-<a href="model_viewer_one.html?m=iruka">イルカ</a><br>
-<a href="model_viewer_one.html?m=atsuhime">篤姫</a><br>
-<a href="model_viewer_one.html?m=kagosimadaigaku">鹿児島大学</a><br>
+<a href="model_viewer_one.html?m=sattun">さっつん</a>
+<a href="model_viewer_one.html?m=amu">アミュ</a>
+<a href="model_viewer_one.html?m=shimazuyoshihiro">島津義弘</a>
+<a href="model_viewer_one.html?m=sakurajimadaikon">桜島大根</a>
+<a href="model_viewer_one.html?m=tsun">ツン</a>
+<a href="model_viewer_one.html?m=satumaimo">さつまいも</a>
+<a href="model_viewer_one.html?m=arena">鹿児島アリーナ</a>
+<a href="model_viewer_one.html?m=okubotoshimichi">大久保利通</a>
+<a href="model_viewer_one.html?m=suizokukan">水族館</a>
+<a href="model_viewer_one.html?m=hirakawadoubutsuen">平川動物公園</a>
+<a href="model_viewer_one.html?m=kagoshimashiden1">市電</a>
+<a href="model_viewer_one.html?m=goromon">鶴丸城 御楼門</a>
+<a href="model_viewer_one.html?m=senganen">仙巌園</a>
+<a href="model_viewer_one.html?m=gakutyou">学長</a>
+<a href="model_viewer_one.html?m=guribu">ぐりぶー</a>
+<a href="model_viewer_one.html?m=sakura">さくら</a>
+<a href="model_viewer_one.html?m=onsen">温泉</a>
+<a href="model_viewer_one.html?m=rurikakesu">ルリカケス</a>
+<a href="model_viewer_one.html?m=rikuzyoukyougijyou">鴨池陸上競技場</a>
+<a href="model_viewer_one.html?m=kagakukan">科学館</a>
+<a href="model_viewer_one.html?m=sakurajimaferry">桜島フェリー</a>
+<a href="model_viewer_one.html?m=kentyou">県庁</a>
+<a href="model_viewer_one.html?m=oukan">王冠</a>
+<a href="model_viewer_one.html?m=iruka1">イルカ</a>
+<a href="model_viewer_one.html?m=atsuhime">篤姫</a>
+<a href="model_viewer_one.html?m=kagosimadaigaku">鹿児島大学</a>
 <a href="model_viewer_one.html?m=koara">コアラ</a>
+
+<footer>
+    <p>鹿児島方言アドベンチャー</p>
+</footer>
 </body>
 </html>
