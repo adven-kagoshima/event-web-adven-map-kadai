@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>鹿児島方言アドベンチャー</title>
+    <meta name="description" content="鹿児島方言アドベンチャーの3Dモデルビューア">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bitcount+Single+Ink:wght@100..900&family=M+PLUS+Rounded+1c:wght@400;800&family=Quantico:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
+    <meta property="og:title" content="鹿児島方言アドベンチャー">
+    <meta property="og:site_name" content="鹿児島方言アドベンチャー">
+    <meta property="og:description" content="鹿児島方言アドベンチャーの3Dモデルを表示しよう！">
+    <meta property="og:image" content="https://adven-map-kadai.github.io/">
+    <meta property="og:type" content="website">
     <style>
     body {
         margin: 0;
@@ -18,90 +24,6 @@
         font-weight: 800;
         font-style: normal;
     }
-    h2#human {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
-        color: #7b6459;/*文字色*/
-    }
-    h2#human:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f007";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#building  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
-        color: #7b6459;/*文字色*/
-    }
-    h2#building:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f1ad";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#train  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
-        color: #7b6459;/*文字色*/
-    }
-    h2#train:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f238";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#food  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
-        color: #7b6459;/*文字色*/
-    }
-    h2#food:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f2e7";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
-
-    h2#animal  {
-        position: relative;/*相対位置*/
-        padding-left: 1.2em;/*アイコン分のスペース*/
-        line-height: 1.4;/*行高*/
-        color: #7b6459;/*文字色*/
-    }
-    h2#animal:before {
-        font-family: "Font Awesome 5 Free";
-        content: "\f1b0";/*アイコンのユニコード*/
-        font-weight: 900;
-        position: absolute;/*絶対位置*/
-        font-size: 1em;/*サイズ*/
-        left: 0;/*アイコンの位置*/
-        top: 0;/*アイコンの位置*/
-        color: #000000; /*アイコン色*/
-    }
     .container{
         display: flex;
         flex-wrap: wrap;
@@ -109,37 +31,69 @@
     }
     model-viewer {
         width: 100vw;
-        height: 90vh;
+        height: 50vh;
         display: block;
     }
-
     p {
         color: #7b6459;/*文字色*/
         text-align: right;
     }
     </style>
     <script>
-    const model_data = { 
-        "apple": [100, 120, 140],
-        "banana": [100, 120, 140],
-        "orange": [100, 120, 140]
+    const model_data = {
+      "sattun": ["原囿晴", "さっつん"],
+      "amuran": ["原囿晴", "アミュ"],
+      "shimazuyoshihiro": ["原囿晴", "島津義弘"],
+      "sakurajimadaikon": ["髙倉秀真", "桜島大根"],
+      "tsun": ["田中卓磨", "ツン"],
+      "satumaimo": ["永田青旺", "さつまいも"],
+      "arena": ["長﨑亮仁", "鹿児島アリーナ"],
+      "okubotoshimichi": ["梅山大智", "大久保利通"],
+      "suizokukan": ["梅山大智", "水族館"],
+      "hirakawadoubutsuen": ["梅山大智", "平川動物公園"],
+      "kagoshimashiden": ["梅木敢太", "市電"],
+      "goromon": ["関康生", "鶴丸城 御楼門"],
+      "senganen": ["田中創太", "仙巌園"],
+      "gakutyou": ["野口しおり", "学長"],
+      "guribu": ["野口しおり", "ぐりぶー"],
+      "sakura": ["野口しおり", "さくら"],
+      "onsen": ["野口しおり", "温泉"],
+      "rurikakesu": ["野口しおり", "ルリカケス"],
+      "rikuzyoukyougijyou": ["愛甲将太", "鴨池陸上競技場"],
+      "kagakukan": ["井原悠登", "科学館"],
+      "sakurajimaferry": ["上籠健人", "桜島フェリー"],
+      "kentyou": ["坂本知太", "県庁"],
+      "oukan": ["大久保健太", "王冠"],
+      "iruka": ["谷口玲奈", "イルカ"],
+      "atsuhime": ["谷口桃子", "篤姫"],
+      "kagosimadaigaku": ["谷口桃子", "鹿児島大学"],
+      "koara": ["宿里梨心", "コアラ"],
     };
-
-    const key = "banana";
-    if (key in model_data) {
-        const value = model_data[key];
-        console.log(`${key} の値は ${value} です。`);
-    } else {
-        console.log(`${key} は辞書にありません。`);
-    }
 
     document.addEventListener('DOMContentLoaded',()=>{
         console.log('search:'+location.search);
         const params = new URLSearchParams(location.search);
-        const model = params.get('m');
+        const m = params.get('m');
 
-        const viewer = document.querySelector("model-viewer");
-        viewer.src="model/" + model +".glb";
+        if (m in model_data) {
+            const [model_creator, model_info] = model_data[m];
+
+            const viewer = document.querySelector("model-viewer");
+            const model_name = document.getElementById("model_name");
+            const creator_name = document.getElementById("creator_name");
+
+            document.querySelector("title").textContent = model_info + " - 鹿児島方言アドベンチャー";
+            document.querySelector('meta[property="og:title"]').setAttribute("content", model_info + " - 鹿児島方言アドベンチャー");
+
+            viewer.src="model/" + m +".glb";
+            viewer.alt = model_info;
+
+            model_name.textContent = model_info;
+            creator_name.textContent = model_creator;
+        } else {
+            const container = document.querySelector(".container");
+            container.innerHTML = "<h2>3Dモデルが見つかりません。</h2>";
+        }
     });
     </script>
 </head>
@@ -147,34 +101,55 @@
 <body>
     <!-- Import the component -->
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+<header>
+    <h1>鹿児島方言アドベンチャー</h1>
+</header>
 
+<section class="container">
+    <h2 id="model_name">鹿児島方言アドベンチャー</h2>
     <!-- Use it like any other HTML element -->
     <!-- poster: Loading用の画像 -->
     <!-- environment-image: 画像で環境反射をシミュレート -->
     <!-- shadow-intensity: model-viewerの照明による陰影の強度(デフォルト:0, 1に近いほど値が1に近いほど、陰影の濃さがます) -->
     <!-- camera-controls: 3Dモデルを操作するためのカメラコントロールを有効 -->
     <!-- touch-action: モバイル端末で3Dモデルをタッチ操作する場合のブラウザのデフォルトのタッチアクションを変更  -->
-
-<header>
-    <h1>鹿児島方言アドベンチャー</h1>
-
-</header>
-
-    <section class="container">
-     <div>
-         <h2 id="food">桜島大根</h2>
-         <model-viewer
-             alt=""
-             src="model\sakurajimadaikon.glb"
-             ar
-             poster="shared-assets/models/NeilArmstrong.webp"
-             shadow-intensity="1" 
-             camera-controls 
-             touch-action="pan-y">
-         </model-viewer>
-        <p class="creator"><i class="fas fa-user-edit"></i>制作者:上籠健人</p>
-     </div>
-    </section>
+    <model-viewer
+        alt=""
+        src="model\sattun.glb"
+        ar
+        poster="shared-assets/models/NeilArmstrong.webp"
+        shadow-intensity="1" 
+        camera-controls 
+        touch-action="pan-y">
+    </model-viewer>
+    <h4><i class="fas fa-user-edit"></i>3Dモデルクリエイター:<span id="creator_name">鹿児島大学</span></h4>
+</section>
+<a href="/model_viewer_one.html?m=sattun">さっつん</a><br>
+<a href="/model_viewer_one.html?m=amuran">アミュ</a><br>
+<a href="/model_viewer_one.html?m=shimazuyoshihiro">島津義弘</a><br>
+<a href="/model_viewer_one.html?m=sakurajimadaikon">桜島大根</a><br>
+<a href="/model_viewer_one.html?m=tsun">ツン</a><br>
+<a href="/model_viewer_one.html?m=satumaimo">さつまいも</a><br>
+<a href="/model_viewer_one.html?m=arena">鹿児島アリーナ</a><br>
+<a href="/model_viewer_one.html?m=okubotoshimichi">大久保利通</a><br>
+<a href="/model_viewer_one.html?m=suizokukan">水族館</a><br>
+<a href="/model_viewer_one.html?m=hirakawadoubutsuen">平川動物公園</a><br>
+<a href="/model_viewer_one.html?m=kagoshimashiden">市電</a><br>
+<a href="/model_viewer_one.html?m=goromon">鶴丸城 御楼門</a><br>
+<a href="/model_viewer_one.html?m=senganen">仙巌園</a><br>
+<a href="/model_viewer_one.html?m=gakutyou">学長</a><br>
+<a href="/model_viewer_one.html?m=guribu">ぐりぶー</a><br>
+<a href="/model_viewer_one.html?m=sakura">さくら</a><br>
+<a href="/model_viewer_one.html?m=onsen">温泉</a><br>
+<a href="/model_viewer_one.html?m=rurikakesu">ルリカケス</a><br>
+<a href="/model_viewer_one.html?m=shiranamisutajiamu">鴨池陸上競技場</a><br>
+<a href="/model_viewer_one.html?m=kagakukan">科学館</a><br>
+<a href="/model_viewer_one.html?m=sakurajimaferry">桜島フェリー</a><br>
+<a href="/model_viewer_one.html?m=kentyou">県庁</a><br>
+<a href="/model_viewer_one.html?m=oukan">王冠</a><br>
+<a href="/model_viewer_one.html?m=iruka">イルカ</a><br>
+<a href="/model_viewer_one.html?m=atsuhime">篤姫</a><br>
+<a href="/model_viewer_one.html?m=kagosimadaigaku">鹿児島大学</a><br>
+<a href="/model_viewer_one.html?m=koara">コアラ</a>
 </body>
-
 </html>
