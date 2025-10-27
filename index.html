@@ -3,47 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | AdvenMap</title>
+    <title>鹿児島方言アドベンチャー</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-
-<script>
-  // function lockOrientation() {
-  //   if (screen.orientation && screen.orientation.lock) {
-  //     screen.orientation.lock("landscape").catch(err => {
-  //       console.log("Orientation lock failed:", err);
-  //     });
-  //   }
-  //   function resizeCanvas() {
-  //     const canvas = document.getElementById("unity-canvas");
-  //     canvas.style.width = window.innerHeight + "px"; // 横に縦幅
-  //     canvas.style.height = window.innerWidth + "px"; // 縦に横幅
-  //   }
-  //   window.addEventListener("resize", resizeCanvas);
-  //   window.addEventListener("load", resizeCanvas);
-  // }
-
-  document.addEventListener("DOMContentLoaded", lockOrientation);
-</script>
-
-<style>
-    #unity-canvas {
-      /* position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: rotate(90deg) translate(-50%, -50%);
-      transform-origin: center center; */
-
-      /* 縦横をブラウザにフィット */
-      /* width: 100vh;   ← 横に縦サイズを使う */
-      /* eight: 100vw;   ← 縦に横サイズを使う */
-    }
-  </style>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1280 height=720 tabindex="-1">
-      </canvas>
+      <canvas id="unity-canvas" width=1280 height=720 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -54,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">AdvenMap</div>
+        <div id="unity-build-title">鹿児島方言アドベンチャー</div>
       </div>
     </div>
     <script>
@@ -98,8 +64,8 @@
         codeUrl: buildUrl + "/event-web-adven-map-kadai.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "IT Adventure",
-        productName: "AdvenMap",
-        productVersion: "03.0",
+        productName: "鹿児島方言アドベンチャー",
+        productVersion: "0.7.0",
         showBanner: unityShowBanner,
       };
 
