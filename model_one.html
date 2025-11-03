@@ -169,9 +169,11 @@
 </section>
 
 <script>
+document.write(`<ul style="list-style-type: none; padding: 0; margin: 0;">`);
 for (const key in model_data) {
-    document.write(`<a href="/model_viewer_one.html?m=${key}">${model_data[key][1]}</a>`);
+    document.write(`<li style="margin:5px; display: inline-block; margin-right: 10px;"><a href="${window.location.origin}${window.location.pathname}?m=${key}">${model_data[key][1]}</a></li>`);
 }
+document.write(`</ul>`);
 </script>
 <footer>
     <p>鹿児島方言アドベンチャー</p>
