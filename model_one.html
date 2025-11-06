@@ -13,34 +13,34 @@
     <meta property="og:title" content="鹿児島方言アドベンチャー">
     <meta property="og:site_name" content="鹿児島方言アドベンチャー">
     <meta property="og:description" content="鹿児島方言アドベンチャーの3Dモデルを表示しよう！">
-    <meta property="og:image" content="https://adven-map-kadai.github.io/">
+    <meta property="og:image" content="">
     <meta property="og:type" content="website">
     <style>
     body {
         margin: 0;
         font-family: "M PLUS Rounded 1c", sans-serif;
-        overflow: hidden; /* スクロール禁止 */
-        -webkit-overflow-scrolling: none; /* iOS の慣性スクロールも無効化 */
+        /* overflow: hidden; /* スクロール禁止 */
+        /*-webkit-overflow-scrolling: none; /* iOS の慣性スクロールも無効化 */
     }
-    h1 {
+    header h1 {
         font-weight: 800;
         font-style: normal;
         text-align: center;
     }
-    h2 {
-        font-weight: 600;
-        color: #7b6459;/*文字色*/
-        text-align: left;
+    header h1 img{
+        width: 400px;
     }
-    h3 {
+    @media (max-width: 600px) {
+        header h1 img{
+            width: 260px;
+        }
+    }
+
+    header h2 {
+        padding: 0;
         font-weight: 600;
         color: #7b6459;/*文字色*/
         text-align: center;
-    }
-    h4 {
-        font-weight: 600;
-        color: #7b6459;/*文字色*/
-        text-align: right;
     }
     header p {
         font-weight: 600;
@@ -51,14 +51,32 @@
         font-weight: 600;
         color: #7b6459;/*文字色*/
         text-align: center;
+        margin: 0;
+        padding: 0;
     }
     header menu ul {
-        list-style: none;
-        padding: 0 0 20px 0;
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
+        list-style: none;
+        padding: 20px 0 20px 0;
         gap: 20px;
     }
+    header menu li {
+        white-space: nowrap;
+    }
+
+    h3 {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
+    }
+    h4 {
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: right;
+    }
+    
     footer p {
         font-weight: 600;
         color: #7b6459;/*文字色*/
@@ -69,10 +87,44 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    .container h2{
+        padding: 0;
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
+    }
+    .container h4{
+        padding: 0;
+        font-weight: 600;
+        color: #7b6459;/*文字色*/
+        text-align: center;
+    }
+
     model-viewer {
         width: 100vw;
         height: 50vh;
         display: block;
+    }
+
+    /* モデル切り替えボタンのスタイル */
+    .controls {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    /* ボタンは下に固定 */
+    .controls button {
+        width: 80px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        background: #007bff;
+        color: white;
+        cursor: pointer;
+    }
+    .controls button:hover {
+        background: #0056b3;
     }
     </style>
     <script>
@@ -118,7 +170,8 @@
             const [model_creator, model_info] = model_data[m];
 
             const viewer = document.querySelector("model-viewer");
-            const model_name = document.getElementById("model_name");
+            const model_name = document.getElementsByClassName("model_name")[0];
+            const h2_model_name = document.getElementById("h2_model_name");
             const creator_name = document.getElementById("creator_name");
 
             document.querySelector("title").textContent = model_info + " - 鹿児島方言アドベンチャー";
@@ -128,6 +181,7 @@
             viewer.alt = model_info;
 
             model_name.textContent = model_info;
+            h2_model_name.textContent = model_info;
             creator_name.textContent = model_creator;
         } else {
             const container = document.querySelector(".container");
@@ -144,13 +198,19 @@
     <h1>
         <img src="Images/title-logo.png" alt="鹿児島方言アドベンチャー" width="400px">
     </h1>
+    <h2><span id="h2_model_name">さっつん</span>モデルページへようこそ！</h2>
+    <p>
+    🎮️ゲーム内の3DモデルをAR表示できます✨️<br>
+    3Dモデルを回転・拡大縮小してみよう！
+    </p>
 
-    <p>3Dモデルをクリック・タップして、回転・拡大縮小してみよう！</p>
+    <menu></menu>
 </header>
 
+<!-- <h3 id="model">3Dモデル</h3> -->
 <section class="container">
     <div>
-        <h2 id="model_name">鹿児島方言アドベンチャー</h2>
+        <h2 class="model_name"><i class="fa-solid fa-paw"></i>さっつん</h2>
         <!-- Use it like any other HTML element -->
         <!-- poster: Loading用の画像 -->
         <!-- environment-image: 画像で環境反射をシミュレート -->
@@ -166,7 +226,7 @@
             camera-controls 
             touch-action="pan-y">
         </model-viewer>
-        <h4><i class="fas fa-user-edit"></i>3Dモデルクリエイター:<span id="creator_name">鹿児島大学</span></h4>
+        <h4><i class="fas fa-user-edit"></i>クリエイター:<span id="creator_name">IT Adventure</span></h4>
     </div>
 </section>
 
@@ -177,8 +237,10 @@ for (const key in model_data) {
 }
 document.write(`</ul>`);
 </script>
+
 <footer>
     <p>鹿児島方言アドベンチャー</p>
 </footer>
+
 </body>
 </html>
