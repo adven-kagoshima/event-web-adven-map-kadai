@@ -214,7 +214,6 @@
         <!-- camera-controls: 3Dモデルを操作するためのカメラコントロールを有効 -->
         <!-- touch-action: モバイル端末で3Dモデルをタッチ操作する場合のブラウザのデフォルトのタッチアクションを変更  -->
         <model-viewer
-            style="background-color: #00ff00;"
             alt=""
             src="model\sattun.glb"
             ar
@@ -228,11 +227,11 @@
 </section>
 
 <script>
-document.write(`<ul style="list-style-type: none; padding: 0; margin: 0;">`);
-for (const key in model_data) {
-    document.write(`<li style="margin:5px; display: inline-block; margin-right: 10px;"><a href="${window.location.origin}${window.location.pathname}?m=${key}">${model_data[key][1]}</a></li>`);
-}
-document.write(`</ul>`);
+// document.write(`<ul style="list-style-type: none; padding: 0; margin: 0;">`);
+// for (const key in model_data) {
+//     document.write(`<li style="margin:5px; display: inline-block; margin-right: 10px;"><a href="${window.location.origin}${window.location.pathname}?m=${key}">${model_data[key][1]}</a></li>`);
+// }
+// document.write(`</ul>`);
 </script>
 
 <footer>
